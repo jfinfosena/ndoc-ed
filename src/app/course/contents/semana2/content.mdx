@@ -1,96 +1,231 @@
-import { Image } from 'antd';
+# Teoría Básica del Álgebra Booleana
+
+El álgebra booleana, también conocida como álgebra de Boole, es un sistema matemático que se utiliza para representar y manipular información lógica. Fue desarrollada por el matemático inglés George Boole en el siglo XIX y se basa en dos valores fundamentales: **verdadero** y **falso**.
+
+## **Conceptos básicos del álgebra booleana:**
+
+-   **Variables booleanas:** Son variables que solo pueden tomar dos valores: 0 (falso) o 1 (verdadero). Se representan con letras mayúsculas, como A, B, C, etc.
+-   **Operadores booleanos:** Son operaciones que se realizan sobre variables booleanas. Los operadores booleanos básicos son:
+    -   **Negación (NOT):** Representada por la barra sobre la variable o por el signo `.`, niega el valor de la variable. Por ejemplo, si A es verdadero, entonces ¬A (o A\`) es falso.
+    -   **Conjunción (AND):** Representada por el símbolo ∧, indica que ambas variables deben ser verdaderas para que la expresión sea verdadera. Por ejemplo, A ∧ B es verdadero solo si A es verdadero y B también es verdadero.
+    -   **Disyunción (OR):** Representada por el símbolo ∨, indica que al menos una de las variables debe ser verdadera para que la expresión sea verdadera. Por ejemplo, A ∨ B es verdadero si A es verdadero, o si B es verdadero, o si ambas son verdaderas.
+-   **Leyes del álgebra booleana:** El álgebra booleana tiene un conjunto de leyes que definen las propiedades de las operaciones booleanas. Estas leyes son similares a las leyes del álgebra ordinaria, pero con algunas diferencias importantes. Algunas de las leyes más importantes del álgebra booleana son:
+    -   **Ley asociativa:** (A ∧ B) ∧ C = A ∧ (B ∧ C) y (A ∨ B) ∨ C = A ∨ (B ∨ C).
+    -   **Ley conmutativa:** A ∧ B = B ∧ A y A ∨ B = B ∨ A.
+    -   **Ley distributiva:** A ∧ (B ∨ C) = (A ∧ B) ∨ (A ∧ C) y A ∨ (B ∧ C) = (A ∨ B) ∧ (A ∨ C).
+    -   **Ley de los elementos identidad:** A ∧ 1 = A y A ∨ 0 = A.
+    -   **Ley de los complementos:** A ∧ ¬A = 0 y A ∨ ¬A = 1.
+-   **Funciones booleanas:** Son expresiones que combinan variables booleanas y operadores booleanos para generar un valor de salida booleano. Las funciones booleanas se pueden representar mediante tablas de verdad, diagramas de Venn o expresiones booleanas.
 
 
-# Clase 1: Introducción a los sistemas embebidos
+## Variables en el Álgebra Booleana
 
-## **Objetivos:**
+Las variables en el álgebra booleana son elementos fundamentales que representan valores lógicos. A diferencia del álgebra ordinaria que maneja números, el álgebra booleana solo utiliza dos valores posibles:
 
--   Al finalizar la clase, los estudiantes podrán:
-    -   Definir qué son los sistemas embebidos.
-    -   Identificar las características y aplicaciones de los sistemas embebidos.
-    -   Reconocer ejemplos de sistemas embebidos en la vida cotidiana.
-    -   Comprender las ventajas y desventajas de los sistemas embebidos.
-# **Contenido:**
+-   **Verdadero (1):** Representa un enunciado o condición que se cumple.
+-   **Falso (0):** Representa un enunciado o condición que no se cumple.
 
-## 1.  **¿Qué son los sistemas embebidos?**
+Las variables booleanas se suelen representar con letras mayúsculas como A, B, C, X, Y, etc. Estas variables actúan como contenedores para los valores lógicos verdadero o falso.
+
+### **Características de las Variables Booleanas:**
+
+-   **Binaridad:** Solo pueden tomar dos valores: 0 (falso) o 1 (verdadero). No admiten valores intermedios ni infinitos.
+-   **Independientes:** En general, las variables booleanas se consideran independientes entre sí. El valor de una variable no depende del valor de otra variable a menos que estén relacionadas por una expresión booleana.
+-   **Símbolos:** No se realizan operaciones aritméticas convencionales sobre variables booleanas (suma, resta, multiplicación, división). Las operaciones aplicables son las operaciones lógicas como negación, conjunción (AND), disyunción (OR), etc.
+### **Ejemplos de Variables Booleanas:**
+
+-   **A:** Puede representar si una bombilla está encendida (1) o apagada (0).
+-   **B:** Puede representar si una puerta está abierta (1) o cerrada (0).
+-   **X:** Puede representar si un número es par (1) o impar (0).
+-   **Y:** Puede representar si un usuario ha iniciado sesión (1) o no (0).
 
 
- <Image
-    style={{borderRadius:10}}
-    preview={false}
-    width={'100%'}
-    src="https://www.cprime.com/wp-content/uploads/2022/12/cprime-myths-about-embedded-systems-development.jpeg"
-  />
-  
-    -   Un sistema embebido es un sistema informático diseñado para realizar una función específica dentro de un dispositivo más grande.
-    -   Los sistemas embebidos suelen estar integrados en dispositivos físicos, como electrodomésticos, automóviles, teléfonos móviles y juguetes.
-    -   A diferencia de las computadoras de uso general, los sistemas embebidos tienen recursos limitados, como memoria, procesamiento y potencia.
-    -   Los sistemas embebidos deben cumplir con requisitos de tiempo real, lo que significa que deben responder a eventos externos en un tiempo determinado.
-## 2.  **Características de los sistemas embebidos**
+## **Aplicaciones del álgebra booleana:**
 
-<Image
-    style={{borderRadius:10}}
-    preview={false}
-    width={'100%'}
-    src="\static\caracteristicasse.png"
-  />
-    -   **Funcionalidad específica:** Los sistemas embebidos están diseñados para realizar una tarea específica, y no son de uso general.
-    -   **Recursos limitados:** Los sistemas embebidos tienen recursos limitados de memoria, procesamiento y potencia.
-    -   **Requisitos de tiempo real:** Los sistemas embebidos deben cumplir con requisitos de tiempo real, lo que significa que deben responder a eventos externos en un tiempo determinado.
-    -   **Restricciones de tamaño y peso:** Los sistemas embebidos suelen estar integrados en dispositivos físicos, por lo que deben tener un tamaño y un peso reducidos.
-    -   **Bajo costo:** Los sistemas embebidos deben ser de bajo costo para que sean competitivos en el mercado.
-## 3.  **Aplicaciones de los sistemas embebidos**
+El álgebra booleana tiene una amplia gama de aplicaciones en diversos campos, incluyendo:
 
-<Image
-    style={{borderRadius:10}}
-    preview={false}
-    width={'100%'}
-    src="\static\aplicacionesse.png"
-  />
-    -   **Electrodomésticos:** lavadoras, refrigeradores, hornos, etc.
-    -   **Automóviles:** motores, sistemas de control de emisiones, sistemas de audio, etc.
-    -   **Teléfonos móviles:** procesadores, radios, cámaras, etc.
-    -   **Juguetes:** robots, coches teledirigidos, consolas de videojuegos, etc.
-    -   **Dispositivos médicos:** marcapasos, monitores de glucosa, bombas de insulina, etc.
-    -   **Instrumentación industrial:** controladores de temperatura, sensores de presión, sistemas de control de calidad, etc.
-    -   **Sistemas de seguridad:** cámaras de vigilancia, alarmas, sistemas de control de acceso, etc.
-## 4.  **Ejemplos de sistemas embebidos**
+-   **Electrónica digital:** Se utiliza para diseñar circuitos lógicos, como compuertas lógicas, flip-flops y contadores.
+-   **Informática:** Se utiliza para diseñar sistemas informáticos, como compiladores, sistemas operativos y redes de computadoras.
+-   **Matemáticas:** Se utiliza para estudiar la teoría de la lógica y la teoría de conjuntos.
+-   **Inteligencia artificial:** Se utiliza para desarrollar sistemas de inteligencia artificial, como sistemas de expertos y sistemas de aprendizaje automático.
 
-<Image
-    style={{borderRadius:10}}
-    preview={false}
-    width={'100%'}
-    src="\static\ejemplosse.png"
-  />
-    -   Un microcontrolador en una lavadora que controla el ciclo de lavado.
-    -   Un procesador de señal digital (DSP) en un teléfono móvil que procesa la señal de audio.
-    -   Un sistema de posicionamiento global (GPS) en un automóvil que navega por las carreteras.
-    -   Un sensor de temperatura en un termostato que controla la temperatura de una casa.
-    -   Un marcapasos que regula los latidos del corazón de un paciente.
-## 5.  **Ventajas de los sistemas embebidos**
 
-<Image
-    style={{borderRadius:10}}
-    preview={false}
-    width={'100%'}
-    src="\static\ventajasse.png"
-  />
-    -   **Bajo costo:** Los sistemas embebidos suelen ser de bajo costo, lo que los hace accesibles para una amplia gama de aplicaciones.
-    -   **Bajo consumo de energía:** Los sistemas embebidos suelen consumir poca energía, lo que los hace ideales para aplicaciones portátiles.
-    -   **Alta confiabilidad:** Los sistemas embebidos suelen ser muy confiables, ya que están diseñados para funcionar en entornos hostiles.
-    -   **Flexibilidad:** Los sistemas embebidos pueden diseñarse para satisfacer las necesidades específicas de una aplicación.
-    -   **Tamaño reducido:** Los sistemas embebidos pueden integrarse en dispositivos pequeños y livianos.
-## 6.  **Desventajas de los sistemas embebidos**
 
-<Image
-    style={{borderRadius:10}}
-    preview={false}
-    width={'100%'}
-    src="\static\desventajasse.png"
-  />
-    -   **Recursos limitados:** Los sistemas embebidos tienen recursos limitados de memoria, procesamiento y potencia, lo que puede limitar su funcionalidad.
-    -   **Requisitos de tiempo real:** Los sistemas embebidos deben cumplir con requisitos de tiempo real, lo que puede dificultar su diseño y programación.
-    -   **Depuración difícil:** La depuración de sistemas embebidos puede ser difícil, ya que el acceso al hardware y al software puede ser limitado.
-    -   **Seguridad:** Los sistemas embebidos pueden ser vulnerables a ataques de seguridad, lo que puede tener graves consecuencias.
+# Minterminos y Maxterminos
+
+En el ámbito de la lógica booleana y el álgebra de Boole, los **minterminos** y **maxterminos** son conceptos fundamentales para representar y simplificar funciones lógicas.
+
+## **Minterminos:**
+
+Un mintermino, también conocido como producto mínimo o forma canónica en producto, es una expresión booleana que representa una única combinación de valores de entrada para la que la función booleana correspondiente tiene un valor de **1** (verdadero). Se caracteriza por las siguientes propiedades:
+
+-   **Conjunción:** Está formado por la conjunción (AND) de literales de las variables de entrada, donde cada literal puede ser una variable sin negar (positiva) o negada (complementada).
+-   **Unicidad:** Cada variable de entrada aparece **exactamente una vez**, ya sea en forma positiva o negada.
+-   **Cantidad:** El número total de minterminos para una función booleana con n variables de entrada es **2^n**.
+### **Ejemplo:**
+
+Para una función booleana con dos variables, A y B, los minterminos serían:
+
+-   AB (ambas variables positivas)
+-   A'B (A negada, B positiva)
+-   AB' (A positiva, B negada)
+-   A'B' (ambas variables negadas)
+## **Maxterminos:**
+
+Un maxtermino, también conocido como suma máxima o forma canónica en suma, es una expresión booleana que representa una única combinación de valores de entrada para la que la función booleana correspondiente tiene un valor de **0** (falso). Se caracteriza por las siguientes propiedades:
+
+-   **Disyunción:** Está formado por la disyunción (OR) de literales de las variables de entrada, donde cada literal puede ser una variable sin negar (positiva) o negada (complementada).
+-   **Unicidad:** Cada variable de entrada aparece **exactamente una vez**, ya sea en forma positiva o negada.
+-   **Cantidad:** El número total de maxterminos para una función booleana con n variables de entrada es también **2^n**.
+### **Ejemplo:**
+
+Para la misma función booleana con dos variables, A y B, los maxterminos serían:
+
+-   A + B (ambas variables disyuntivas)
+-   A' + B (A negada disyuntiva con B positiva)
+-   A + B' (A positiva disyuntiva con B negada)
+-   A' + B' (ambas variables negadas disyuntivas)
+## **Aplicaciones:**
+
+Los minterminos y maxterminos tienen diversas aplicaciones en electrónica digital, diseño de circuitos lógicos y representación de funciones booleanas. Algunas de las más importantes son:
+
+-   **Simplificación de funciones booleanas:** Se utilizan técnicas como la reducción por mapas de Karnaugh para simplificar expresiones booleanas mediante la eliminación de redundancias y la identificación de patrones.
+-   **Implementación de circuitos lógicos:** Los minterminos y maxterminos se pueden utilizar para diseñar circuitos lógicos combinacionales utilizando compuertas AND, OR y NOT.
+-   **Análisis de funciones booleanas:** Permiten comprender el comportamiento de una función booleana para todas las posibles combinaciones de entradas.
+
+# Ejemplo de Minterminos
+
+## **Función booleana:**
+
+Consideremos una función booleana **F(A, B, C)** que se define como:
+
+```
+F(A, B, C) = AB + BC + A'C'
+```
+
+## **Objetivo:**
+
+El objetivo es encontrar la tabla de verdad de minterminos para la función **F(A, B, C)** y utilizarla para expresar la función en forma de suma de minterminos.
+
+## **Pasos:**
+
+### 1.  **Enumerar todas las combinaciones posibles de valores de entrada para las variables A, B y C:**
+
+| A | B | C |
+| --- | --- | --- |
+| 0 | 0 | 0 |
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 0 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+| 1 | 1 | 1 |
+
+### 2.  **Evaluar la función F(A, B, C) para cada combinación de valores de entrada:**
+
+| A | B | C | F(A, B, C) |
+| --- | --- | --- | --- |
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 0 |
+
+### 3.  **Identificar los minterminos:**
+
+Los minterminos son las filas de la tabla de verdad donde el valor de la función **F(A, B, C)** es **1** (verdadero). En este caso, los minterminos son:
+
+-   **M0:** A'B'C (0, 0, 1)
+-   **M1:** A'BC' (0, 1, 0)
+-   **M2:** AB'C (1, 0, 0)
+-   **M3:** ABC (1, 1, 1)
+### 4.  **Expresar la función en forma de suma de minterminos:**
+
+La función **F(A, B, C)** se puede expresar como la suma de sus minterminos:
+
+```
+F(A, B, C) = M0 + M1 + M2 + M3
+```
+```
+F(A, B, C) = A'B'C + A'BC' + AB'C + ABC
+```
+
+# Ejemplo de Maxterminos
+
+## **Función booleana:**
+
+Consideremos una función booleana **G(A, B, C)** que se define como:
+
+```
+G(A, B, C) = (A + B')*(C + B)
+```
+
+## **Objetivo:**
+
+El objetivo es encontrar la tabla de verdad de maxterminos para la función **G(A, B, C)** y utilizarla para expresar la función en forma de producto de maxterminos.
+
+## **Pasos:**
+
+### 1.  **Enumerar todas las combinaciones posibles de valores de entrada para las variables A, B y C:**
+
+| A | B | C |
+| --- | --- | --- |
+| 0 | 0 | 0 |
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 0 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+| 1 | 1 | 1 |
+
+### 2.  **Negar la función G(A, B, C):**
+
+```
+G'(A, B, C) = (A' + B)*(C' + B')
+```
+
+### 3.  **Evaluar la función G'(A, B, C) para cada combinación de valores de entrada:**
+
+| A | B | C | G'(A, B, C) |
+| --- | --- | --- | --- |
+| 0 | 0 | 0 | 1 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 |
+
+
+
+### 4.  **Identificar los maxterminos:**
+
+Los maxterminos son las filas de la tabla de verdad donde el valor de la función **G'(A, B, C)** es **1** (verdadero). En este caso, los maxterminos son:
+
+-   **M0:** A'B'C' (0, 0, 0)
+-   **M1:** A'B'C (0, 0, 1)
+-   **M2:** AB'C' (0, 1, 0)
+-   **M3:** AB'C (0, 1, 1)
+### 5.  **Negar cada maxtermino:**
+-   **M0':** ABC
+-   **M1':** ABC'
+-   **M2':** AB'C
+-   **M3':** AB'C'
+### 6.  **Expresar la función en forma de producto de maxterminos:**
+
+La función **G(A, B, C)** se puede expresar como el producto de sus maxterminos negados:
+
+```
+G(A, B, C) = (ABC)'*(ABC')'*(AB'C')'*(AB'C')'
+```
+```
+G(A, B, C) = A'B'C + A'BC' + AB'C + AB'C'
+```
 
 

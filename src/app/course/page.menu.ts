@@ -43,4 +43,21 @@ export const itemsInfo: itemsInfoType[] = [
             },           
         ]
     },     
+    {
+        href: "/course/contents/semana1",
+        label: "Semana 2",
+        date: '2024-5-3',
+        submenu: [
+            {
+                href: "/course/contents/semana2",
+                label: "Contenido",
+                date: '2024-5-3',
+            },
+            {
+                href: "/course/activities/actividad2",
+                label: "Actividad 2",
+                date: '2024-5-3',
+            },           
+        ]
+    },     
 ]

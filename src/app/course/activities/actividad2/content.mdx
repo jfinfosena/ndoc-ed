@@ -1,0 +1,79 @@
+# Actividad 2: 
+
+## Ejercicio 1: Encontrar la función lógica y el circuito combinacional equivalente usando minTérminos a partir de una tabla de verdad de 3 entradas.
+
+Para encontrar la función lógica a partir de una tabla de verdad de 3 entradas utilizando minTérminos, se siguen estos pasos:
+
+### **1\. Identificar las filas con salida 1:**
+
+Revise la tabla de verdad y busque las filas donde el valor de salida es 1. Estas filas representan las combinaciones de entradas que hacen que la función sea verdadera.
+
+### **2\. Crear minTérminos para cada fila:**
+
+Para cada fila con salida 1, cree un minTérmino. Un minTérmino es la conjunción (producto lógico) de las variables de entrada, donde:
+
+-   Se usa la variable sin negar si su valor en la fila es 1.
+-   Se usa la variable negada (con barra superior) si su valor en la fila es 0.
+
+Por ejemplo, si una fila tiene valores de entrada (A, B, C) = (1, 0, 1), el minTérmino correspondiente sería (AB'C).
+
+### **3\. Escribir la función lógica como suma de minTérminos:**
+
+La función lógica se expresa como la suma de todos los minTérminos creados en el paso 2. Esta expresión representa la disyunción (suma lógica) de las condiciones que hacen que la función sea verdadera.
+
+### **Tabla de verdad:**
+
+Considere la siguiente tabla de verdad de 3 entradas con una salida y encuentre la función lógica y el circuito combinacional equivalente:
+
+| A | B | C | Salida |
+| --- | --- | --- | --- |
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
+
+
+## Ejercicio 2: Encontrar la función lógica y el circuito combinacional equivalente usando máxTérminos a partir de una tabla de verdad de 3 entradas
+
+Para encontrar la función lógica a partir de una tabla de verdad de 3 entradas utilizando máxTérminos, se siguen estos pasos:
+
+### **1\. Identificar las filas con salida 0:**
+
+Revise la tabla de verdad y busque las filas donde el valor de salida es 0. Estas filas representan las combinaciones de entradas que hacen que la función sea falsa.
+
+### **2\. Crear máxTérminos para cada fila:**
+
+Para cada fila con salida 0, cree un máxTérmino. Un máxTérmino es la disyunción (suma lógica) de las variables de entrada negadas, donde:
+
+-   Se usa la variable negada (con barra superior) si su valor en la fila es 1.
+-   Se usa la variable sin negar si su valor en la fila es 0.
+
+Por ejemplo, si una fila tiene valores de entrada (A, B, C) = (1, 1, 0), el máxTérmino correspondiente sería (A'B'C).
+
+### **3\. Escribir la función lógica como producto de máxTérminos:**
+
+La función lógica se expresa como el producto de todos los máxTérminos creados en el paso 2. Esta expresión representa la conjunción (producto lógico) de las condiciones que hacen que la función sea falsa. La función final se obtiene negando la expresión anterior.
+
+### **Tabla de verdad:**
+
+Considere la siguiente tabla de verdad de 3 entradas con una salida y encuentre la función lógica y el circuito combinacional equivalente:
+
+| A | B | C | Salida |
+| --- | --- | --- | --- |
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
+
+
+
+# **Entrega de la evidencia:** 
+Crear un documento con la solución de los 2 ejercicios y pegue el enlace del documento compartido en el documento de evidencias. Asegurarse de que el enlace funcione correctamente y permita acceder al documento.
